@@ -1,0 +1,130 @@
+/* 1단계 : 리셋 + 전역 스타일 적용 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #141414;
+  color: white;
+}
+
+/* 컴포넌트 별 2~4 단계 반복 */
+/* ===== header 영역(상단 네비게이션) ===== */
+/* 2단계 : 레이아웃 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* 3단계 : 컴포넌트 스타일 */
+.logo {
+  color: rgb(218, 2, 2);
+  font-size: 28px;
+}
+.navbar nav a {
+  /* text-decoration : a태그를 사용하면 밑줄이 생기는 데 없애준다. */
+  text-decoration: none;
+  color: #ccc;
+  margin-left: 20px;
+  transition: color 0.5s ease;
+}
+/* 4단계 : 세부조정 */
+.navbar nav a:hover {
+  color: #fff;
+}
+
+/* ===== hero 영역(메인 배너) ===== */
+/* 2단계 */
+.hero {
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 30px;
+  /* 레이어 1 - linear-gradient (그라데이션 기능)
+  : 둘 이상의 색상이 경계선 없이 자연스럽게 점진적으로 변화하는 효과  */
+  /* 레이어 2 - 배경 사진
+  url() : 이미지 
+  center : 이미지 중심을 중앙 영역에 배치
+  /cover : 비율 유지하며 영역에 꽉 채움*/
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
+}
+/* 3단계 */
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.btn-play,
+.btn-info {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.btn-play:hover {
+  background-color: #ccc;
+}
+.btn-info:hover {
+  background-color: #ccc;
+}
+
+/* ===== movie-row 영역 (가로 스크롤 영화 리스트) ===== */
+/* 2단계 */
+.movie-row {
+  padding: 30px;
+}
+.movie-list {
+  display: flex;
+  /* overflow-x: auto; : 넘어가는 영역 자동으로 가로 스크롤 형성 */
+  /* overflow-x: scroll; : 내용이 없어도 스크롤바 항상 표시*/
+  overflow-x: auto;
+  /* overflow-y: hidden; : y축으로 넘치는 부분은 잘려나가며 스크롤 불가 */
+  overflow-y: hidden;
+  /* 부모 입장에서 자식들 여백 */
+  gap: 10px;
+  padding: 15px 7px;
+}
+/* 3단계 */
+.movie-row h2 {
+  font-size: 20px;
+}
+.movie-list img {
+  width: 150px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+/* 4단계 */
+.movie-list img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== footer 영역 ===== */
+footer {
+  padding: 20px 30px;
+  color: #ccc;
+}
+
+/* 5단계 : 반응형 처리 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .logo {
+    margin-left: 16px;
+  }
+}

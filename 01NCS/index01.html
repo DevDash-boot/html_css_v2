@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 리셋 + 전역 스타일 설정 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+      }
+      /* header 영역 */
+      header {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px;
+      }
+      .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: fle;
+        font-size: 30px;
+      }
+      .logo1 {
+        color: #1a237e;
+      }
+      .logo2 {
+        color: #00c1de;
+      }
+      .navigation-menu {
+        display: inline-block;
+      }
+      .nm {
+        margin: 10px;
+        font-weight: bolder;
+        font-size: 18px;
+        color: #707370;
+      }
+
+      /* Hero 영역 */
+      .Hero {
+        text-align: center;
+        padding: 90px 20px;
+        background-color: #202b87;
+        color: white;
+      }
+      .Hero > h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      /* Features 영역 */
+      .Features {
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 20px;
+      }
+      .imoge {
+        margin-bottom: 35px;
+        font-size: 40px;
+      }
+      .subject {
+        color: #202a86;
+        margin: 20px;
+        font-size: 20px;
+      }
+      .card-body {
+        padding: 40px;
+        margin: 50px 10px;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s;
+      }
+      .card-body:hover {
+        transform: translateY(-10px);
+        box-shadow: 4px 8px 25px rgba(0, 0, 0, 0.8);
+      }
+
+      /* footer 영역 */
+      footer {
+        background-color: #333;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo1"><strong>BRAND</strong></div>
+        <div class="logo2"><strong>LOGO</strong></div>
+      </div>
+      <div class="navigation-menu">
+        <span class="nm">소개</span>
+        <span class="nm">서비스</span>
+        <span class="nm">문의하기</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="Hero">
+        <h1 class="title1">더 나은 미래를 만드는 혁신</h1>
+        <p class="sub1">우리는 가장 단순한 방법으로 최고의 가치를 전달합니다.</p>
+      </div>
+
+      <div class="Features">
+        <div class="card-body">
+          <div class="imoge">🚀</div>
+          <h3 class="subject">빠른 속도</h3>
+          <p class="sub-explain">최신 기술을 활용하여 가장 빠른 퍼포먼스를 보장합니다.</p>
+        </div>
+        <div class="card-body">
+          <div class="imoge">💎</div>
+          <h3 class="subject">높은 품질</h3>
+          <p class="sub-explain">정교한 코드와 디자인으로 최상의 결과물을 제공합니다.</p>
+        </div>
+        <div class="card-body">
+          <div class="imoge">🤝</div>
+          <h3 class="subject">고객 신뢰</h3>
+          <p class="sub-explain">언제나 고객의 목소리에 귀 기울이며 함께 성장합니다.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>ⓒ 2026 Brand Design. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
