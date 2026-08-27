@@ -1,0 +1,149 @@
+/* CSS 변수 : 색상 테마를 한 곳에서 관리
+:root는 html 요소를 가리키며, 
+여기 선언한 변수는 모든 하위 요소가 물려 받는다.*/
+:root {
+  --apple-black: #000;
+  --apple-gray: #86868b;
+  --apple-blue: #0071e3;
+  --apple-white: #f5f5f5;
+  --card-bg: #1d1d1f;
+
+  --header-height: 56px;
+}
+/* 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: var(--apple-black);
+  color: var(--apple-white);
+}
+
+/* 헤더 영역 (고정 네비게이션)*/
+.site-header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 요소 뒤에 있는 배경에 필터를 건다. 
+  blur(10px) : 뒤 내용을 10px만큼 흐리게 만든다.
+  반투명 배경색과 함께 쓰면 유리판 같은 느낌이 난다.*/
+  backdrop-filter: blur(10px);
+  /* 다른 요소 위에 항상 보이도록 하는 것 
+  단, position이 지정된 요소에만 적용이 된다.*/
+  z-index: 100;
+}
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav a {
+  color: var(--apple-gray);
+  margin-left: 25px;
+}
+.nav a:hover {
+  color: white;
+}
+
+/* 메인 영역 hero */
+main {
+  /* fixed 에 가려지지 않도록 본문 전체를 헤더 높이만큼 밀어낸다. */
+  padding-top: var(--header-height);
+}
+.hero {
+  /* 100vh를 그대로 쓰면 padding-top이 더해져서 화면보다 더 크게 보인다. */
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 23px;
+  color: var(--apple-gray);
+  margin-bottom: 30px;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: 24px;
+  color: var(--apple-white);
+  transition: opacity 0.3s ease;
+}
+.btn-primary {
+  background-color: var(--apple-blue);
+}
+.btn-primary:hover {
+  opacity: 0.7;
+}
+.btn-secondary {
+  color: var(--apple-blue);
+  border: 1px solid var(--apple-blue);
+  transition:
+    background-color 0.3s ease,
+    color 0.5s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--apple-blue);
+  color: white;
+}
+
+/* 메인 영역 feature */
+.feature {
+  padding: 80px 30px;
+  text-align: center;
+}
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.feature h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  /* 카드 폭을 지정하지 않으면 텍스트 길이에 따라서 재각각 크기를 가질 수 있다. */
+  flex: 0 1 260px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.4s ease;
+}
+.feature-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  color: var(--apple-gray);
+  font-size: 15px;
+}
+.feature-card:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 푸터 영역 */
+footer {
+  text-align: center;
+  color: var(--apple-gray);
+}

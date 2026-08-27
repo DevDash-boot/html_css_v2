@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #fff;
+}
+/* header 상단 */
+.top1 {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.top1 a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+}
+.top-nav-menu a:hover {
+  color: #7c7c7c;
+}
+
+/* header 하단 */
+.top2 {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.top-logo {
+  display: flex;
+  flex: 1;
+}
+.top-nav {
+  display: flex;
+  flex: 3;
+  gap: 17px;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+}
+.top-nav a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.top-menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.top-menu a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+/* main promotion*/
+.promotion {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 7px;
+}
+.promotion p {
+  margin-bottom: 2px;
+}
+.promotion a {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+.hero-main-img img {
+  display: block;
+  height: 75vh;
+  width: 100%;
+  object-fit: fill;
+}
+.main-script {
+  text-align: center;
+  padding: 20px;
+}
+.main-script h2 {
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.story1 p {
+  margin-bottom: 2px;
+}
+.story1 {
+  margin-bottom: 25px;
+}
+.story2 {
+  margin-bottom: 10px;
+}
+.main-atag a {
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 10px 2px 30px;
+  display: inline-block;
+}
+.main-atag a:hover {
+  background-color: #7c7c7c;
+}
+.hero-sub1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 65vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
+}
+.hero-sub1-script {
+  margin-bottom: 40px;
+}
+.hero-sub1-script h2 {
+  font-size: 50px;
+  margin: 10px;
+}
+.hero-sub1-script p {
+  margin: 7px;
+}
+.purchase {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+}
+.purchase:hover {
+  background-color: #bdbcbc;
+}
+.hero-sub1-script a {
+  display: inline-block;
+  margin-top: 30px;
+}
+.hero-sub2row {
+  display: flex;
+  height: 60vh;
+  color: white;
+}
+.hero-sub2 {
+  width: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 0 60px 50px;
+}
+.hero-sub2 a {
+  display: inline-block;
+  margin-top: 30px;
+}
+.card {
+  background-color: #bdbcbc;
+  padding: 40px;
+}
