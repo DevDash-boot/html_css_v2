@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 패턴 1. 완전 가운데 정렬 */
+.demo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2fe;
+  height: 20vh;
+}
+.box {
+  background-color: #5045e6;
+  padding: 30px;
+  color: white;
+  border-radius: 7px;
+}
+
+/* 패턴 2. 네비게이션 바 */
+.demo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293c;
+  padding: 15px;
+  margin-top: 20px;
+}
+.demo-nav span {
+  font-size: 20px;
+  color: white;
+}
+.demo-nav div a {
+  text-decoration: none;
+  margin: 0 15px;
+
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+.demo-nav div a:hover {
+  color: white;
+}
+
+/* 패턴 3. 카드 그리드 */
+.demo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f9fbfc;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card {
+  flex: 1 1 200px;
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* 패턴 4. 사이드바 + 메인 */
+.demo-sidebar-layout {
+  display: flex;
+  min-height: 200px;
+  margin-top: 20px;
+}
+.sidebar {
+  background-color: #1e293c;
+  color: white;
+  width: 200px;
+  padding: 20px;
+  flex-shrink: 1;
+}
+.content {
+  background-color: #f1f5f9;
+  padding: 20px;
+  flex: 1;
+}
+
+/* 패턴 5. 히어로 섹션 */
+.demo-hero {
+  height: 300px;
+  background: url("https://picsum.photos/seed/hero/1200/300") center/cover;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 패턴 6. 스티키 푸터 */
+footer {
+  background-color: #1e293c;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content-wrapper {
+  flex: 1;
+}
+
+/* 패턴 7. 반응형 2단에서 1단으로 */
+.demo-responsive {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+  background-color: #dbeafe;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .demo-responsive {
+    flex-direction: column;
+  }
+}
