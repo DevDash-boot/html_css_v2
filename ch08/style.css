@@ -18,6 +18,7 @@
 }
 a {
   text-decoration: none;
+  display: inline-block;
 }
 body {
   background-color: var(--apple-black);
