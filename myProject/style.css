@@ -3,183 +3,830 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   background-color: #fff;
+  color: #111;
 }
-/* header 상단 */
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header.menual {
+  position: relative;
+  width: 100%;
+}
+
+/* ==========================================
+   HEADER 상단
+   ========================================== */
+
 .top1 {
   background-color: #f5f5f5;
+
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  align-items: center;
+
+  padding: 10px 48px;
+
   font-size: 12px;
   font-weight: bold;
+
+  height: 36px;
 }
+
 .top1 a {
   text-decoration: none;
-  margin: 10px;
-  color: black;
+  margin-right: 12px;
+  color: #111;
 }
+
 .top-nav-menu a:hover {
   color: #7c7c7c;
 }
 
-/* header 하단 */
+/* ==========================================
+   HEADER 하단
+   ========================================== */
+
 .top2 {
   background-color: #fff;
+
   display: flex;
   align-items: center;
-  padding: 20px;
 
   width: 100%;
-  position: sticky;
-  top: 0;
+  height: 60px;
+
+  padding: 0 48px;
+
+  position: fixed;
+
+  top: 36px;
+  left: 0;
+
   z-index: 100;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  transition: top 0.2s ease;
 }
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
 .top-logo {
   display: flex;
-  flex: 1;
+  align-items: center;
+
+  width: 200px;
+
+  flex-shrink: 0;
+
+  font-weight: 900;
+  font-size: 24px;
 }
+
+/* ================================
+   중앙 NAV
+   ================================ */
+
 .top-nav {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
-  flex: 3;
-  gap: 17px;
-  font-size: 20px;
+  align-items: center;
+
+  gap: 20px;
+
+  font-size: 16px;
   font-weight: bold;
-  justify-content: center;
+
+  white-space: nowrap;
 }
+
 .top-nav a {
   text-decoration: none;
   color: black;
-  text-align: center;
-}
-.top-menu {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-}
-.top-menu a {
-  text-decoration: none;
-  color: black;
-  margin-left: 20px;
 }
 
-/* main promotion*/
+/* ================================
+   오른쪽 MENU
+   ================================ */
+
+.top-menu {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   검색창
+   ========================================== */
+
+.top-menu .search {
+  border: none;
+
+  background-color: #f5f5f5;
+
+  padding: 8px 16px 8px 40px;
+
+  border-radius: 20px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  width: 180px;
+  height: 40px;
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
+
+  background-repeat: no-repeat;
+  background-position: 12px center;
+
+  transition: background-color 0.2s;
+
+  cursor: pointer;
+}
+
+.top-menu .search:hover {
+  background-color: #e5e5e5;
+}
+
+/* ==========================================
+   하트 / 바구니
+   ========================================== */
+
+.top-menu a {
+  text-decoration: none;
+
+  color: black;
+
+  margin-left: 8px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  transition: background-color 0.2s;
+}
+
+.top-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+/* ==========================================
+   MAIN
+   ========================================== */
+
+main {
+  width: 100%;
+  padding-top: 60px;
+}
+
+/* ==========================================
+   Promotion
+   ========================================== */
+
 .promotion {
   background-color: #f5f5f5;
+
   text-align: center;
-  padding: 7px;
+
+  padding: 10px;
 }
+
 .promotion p {
   margin-bottom: 2px;
+
+  font-weight: bold;
+  font-size: 14px;
 }
+
 .promotion a {
   color: black;
+
   font-size: 12px;
   font-weight: bold;
 }
+
+/* ==========================================
+   MAIN HERO
+   ========================================== */
+
 .hero-main-img img {
   display: block;
-  height: 75vh;
+
+  height: 70vh;
   width: 100%;
-  object-fit: fill;
+
+  object-fit: cover;
 }
+
 .main-script {
   text-align: center;
-  padding: 20px;
+
+  padding: 40px 20px;
 }
+
 .main-script h2 {
-  margin-top: 10px;
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-size: 48px;
+
+  font-weight: 900;
+
+  margin-bottom: 16px;
 }
-.story1 p {
-  margin-bottom: 2px;
-}
-.story1 {
-  margin-bottom: 25px;
-}
+
+.story1 p,
 .story2 {
-  margin-bottom: 10px;
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #111;
 }
+
 .main-atag a {
   text-decoration: none;
+
   color: #fff;
+
   background-color: black;
+
   border-radius: 30px;
-  font-size: 16px;
+
+  font-size: 14px;
   font-weight: bold;
-  padding: 10px 15px;
-  margin: 10px 2px 30px;
+
+  padding: 8px 18px;
+
+  margin: 20px 4px 0;
+
   display: inline-block;
 }
+
 .main-atag a:hover {
   background-color: #7c7c7c;
 }
+
+/* ==========================================
+   HERO SUB 1
+   ========================================== */
+
 .hero-sub1 {
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-end;
+
   align-items: center;
+
   color: white;
+
   text-align: center;
+
   height: 65vh;
+
   background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
     url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
 }
+
 .hero-sub1-script {
   margin-bottom: 40px;
 }
+
 .hero-sub1-script h2 {
-  font-size: 50px;
+  font-size: 48px;
+
   margin: 10px;
+
+  font-weight: 900;
 }
-.hero-sub1-script p {
-  margin: 7px;
-}
+
+/* ==========================================
+   구매하기 버튼
+   ========================================== */
+
 .purchase {
   text-decoration: none;
+
   background-color: white;
+
   color: black;
+
   border-radius: 20px;
-  font-size: 18px;
+
+  font-size: 14px;
+
   font-weight: bold;
-  padding: 8px 15px;
-}
-.purchase:hover {
-  background-color: #bdbcbc;
-}
-.hero-sub1-script a {
+
+  padding: 8px 18px;
+
   display: inline-block;
-  margin-top: 30px;
 }
+
+.purchase:hover {
+  background-color: #cccccc;
+}
+
+/* ==========================================
+   HERO SUB 2
+   ========================================== */
+
 .hero-sub2row {
   display: flex;
+
+  gap: 0;
+
   height: 60vh;
+
+  padding: 0;
+}
+
+.hero-sub2 {
+  flex: 1;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url("https://picsum.photos/seed/sub2/800/600") center/cover;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  align-items: flex-start;
+
+  padding: 40px;
+
   color: white;
 }
-.hero-sub2 {
-  width: 100%;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0 0 60px 50px;
-}
-.hero-sub2 a {
-  display: inline-block;
-  margin-top: 30px;
-}
+
+/* ==========================================
+   TRENDING NOW
+   ========================================== */
+
 .card {
-  background-color: #bdbcbc;
-  padding: 40px;
+  padding: 40px 48px;
+}
+
+.card > h2 {
+  font-size: 24px;
+
+  font-weight: bold;
+
+  margin-bottom: 24px;
+}
+
+.cards-wrapper {
+  display: flex;
+
+  gap: 16px;
+}
+
+.card-item {
+  position: relative;
+
+  flex: 1;
+
+  height: 540px;
+
+  overflow: hidden;
+}
+
+.card-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+
+  bottom: 40px;
+  left: 30px;
+
+  color: white;
+}
+
+.card-content h3 {
+  font-size: 20px;
+
+  font-weight: bold;
+
+  margin-bottom: 16px;
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   SPOTLIGHT
+   ========================================== */
+
+.product {
+  padding: 60px 48px;
+
+  text-align: center;
+}
+
+.product h2 {
+  font-size: 60px;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 16px;
+}
+
+.spotlight-sub {
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #111;
+
+  margin-bottom: 60px;
+}
+
+.spotlight-grid {
+  display: grid;
+
+  grid-template-columns: repeat(8, 1fr);
+
+  gap: 24px 12px;
+}
+
+.spotlight-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.spotlight-item .img-box {
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+}
+
+.spotlight-item img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+.spotlight-item p {
+  font-size: 13px;
+
+  font-weight: bold;
+
+  color: #111;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+  background-color: #fff;
+
+  color: #111;
+
+  padding: 40px 48px 60px;
+
+  border-top: 1px solid #e5e5e5;
+
+  font-size: 12px;
+}
+
+.footer-top {
+  display: flex;
+
+  justify-content: flex-start;
+
+  gap: 60px;
+
+  position: relative;
+
+  padding-bottom: 40px;
+}
+
+.info-menu {
+  width: 200px;
+}
+
+.info-menu h4 {
+  font-size: 13px;
+
+  font-weight: bold;
+
+  margin-bottom: 16px;
+}
+
+.info-menu p {
+  color: #757575;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.info-menu p:hover {
+  color: #111;
+}
+
+.footer-region {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  font-weight: bold;
+}
+
+.footer-mid {
+  display: flex;
+
+  gap: 16px;
+
+  align-items: center;
+
+  color: #757575;
+
+  padding-bottom: 30px;
+}
+
+.footer-mid a {
+  color: #757575;
+
+  text-decoration: none;
+}
+
+.footer-mid a:hover {
+  color: #111;
+}
+
+.footer-mid .bold-text {
+  font-weight: bold;
+
+  color: #111;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e5e5e5;
+
+  padding-top: 24px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #757575;
+
+  line-height: 1.6;
+}
+
+.company-details {
+  max-width: 55%;
+}
+
+.safety-text {
+  max-width: 40%;
+}
+
+.footer-bottom a {
+  color: #111;
+
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) and (min-width: 769px) {
+  .top2 {
+    padding: 0 24px;
+  }
+
+  .top-nav {
+    gap: 12px;
+
+    font-size: 14px;
+  }
+
+  .top-logo {
+    width: 150px;
+  }
+
+  .top-menu .search {
+    width: 140px;
+  }
+
+  .top-menu a {
+    margin-left: 4px;
+  }
+}
+
+/* ==========================================
+   반응형
+   768px 이하
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* top1 숨김 */
+  .top1 {
+    display: none;
+  }
+
+  /* top2 */
+  .top2 {
+    top: 0;
+
+    height: 60px;
+
+    padding: 0 24px;
+  }
+
+  /* 중앙 메뉴 제거 */
+  .top-nav {
+    display: none;
+  }
+
+  /* 로고 */
+  .top-logo {
+    width: auto;
+
+    font-size: 22px;
+  }
+
+  /* 오른쪽 메뉴 */
+  .top-menu {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+  }
+
+  /* 검색창 → 돋보기 */
+  .top-menu .search {
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    font-size: 0;
+
+    border-radius: 50%;
+
+    background-position: center;
+
+    background-color: transparent;
+
+    flex-shrink: 0;
+  }
+
+  /* 검색 hover */
+  .top-menu .search:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* 하트 / 장바구니 */
+  .top-menu a {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 4px;
+
+    flex-shrink: 0;
+  }
+}
+
+/* ------------------------------------------
+     Trending Now
+     ------------------------------------------ */
+
+.card {
+  padding: 40px 24px;
+}
+
+.cards-wrapper {
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding-bottom: 16px;
+}
+
+.card-item {
+  flex: 0 0 80%;
+
+  scroll-snap-align: start;
+}
+
+/* ------------------------------------------
+     Footer
+     ------------------------------------------ */
+
+.footer-top {
+  flex-direction: column;
+
+  gap: 0;
+
+  padding-bottom: 20px;
+}
+
+.info-menu {
+  width: 100%;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.info-menu h4 {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 16px 0;
+
+  margin-bottom: 0;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+/* 오른쪽 화살표 */
+.info-menu h4::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+
+  transform: rotate(45deg);
+
+  transition: transform 0.3s ease;
+}
+
+/* 펼쳐졌을 때 */
+.info-menu.active h4::after {
+  transform: rotate(-135deg);
+}
+
+/* 하위 메뉴 숨김 */
+.info-menu-content {
+  display: none;
+
+  padding-bottom: 16px;
+}
+
+/* 하위 메뉴 펼침 */
+.info-menu.active .info-menu-content {
+  display: block;
+}
+
+/* 대한민국 */
+.footer-region {
+  position: static;
+
+  padding: 20px 0;
 }
