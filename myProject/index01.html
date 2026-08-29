@@ -3,65 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NIKE 연습</title>
+    <title>NIKE 공식 스토어</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        /* ==========================================
+       Footer 아코디언
+       ========================================== */
+
+        const infoMenus = document.querySelectorAll(".info-menu");
+
+        infoMenus.forEach((menu) => {
+          const title = menu.querySelector("h4");
+
+          title.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              menu.classList.toggle("active");
+            }
+          });
+        });
+
+        /* ==========================================
+       top2 스크롤 고정
+       ========================================== */
+
+        const top2 = document.querySelector(".top2");
+
+        window.addEventListener("scroll", () => {
+          if (window.innerWidth > 768) {
+            if (window.scrollY > 36) {
+              top2.style.top = "0px";
+            } else {
+              top2.style.top = "36px";
+            }
+          } else {
+            top2.style.top = "0px";
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <header class="menual">
       <!-- header 상단 -->
       <section class="top1">
         <div class="top-nav-logo">
-          <a href="https://www.nike.com/kr/jordan">조던</a>
-          <a href="https://www.converse.co.kr/">컨버스</a>
+          <a href="https://www.nike.com/kr/jordan">👉</a>
+          <a href="https://www.converse.co.kr/">🎶</a>
         </div>
 
         <div class="top-nav-menu">
-          <a href="">매장찾기</a> | <a href="">고객센터</a> | <a href="">가입하기</a> |
+          <a href="">매장찾기</a> | <a href="">고객센터</a> |
+          <a href="">가입하기</a> |
           <a href="">로그인</a>
         </div>
       </section>
+
+      <!-- header 하단 -->
+      <section class="top2">
+        <div class="top-logo">NIKE</div>
+
+        <div class="top-nav">
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a href="">Kids</a>
+          <a href="">Sport</a>
+          <a href="">Sale</a>
+          <a href="">Jordan</a>
+          <a href="">NikeSKIMS</a>
+        </div>
+
+        <div class="top-menu">
+          <button class="search"></button>
+          <a href="">❤️</a>
+          <a href="">🧺</a>
+        </div>
+      </section>
     </header>
-
-    <!-- header 하단 -->
-    <section class="top2">
-      <div class="top-logo">로고</div>
-
-      <div class="top-nav">
-        <a href="">Men</a>
-        <a href="">Women</a>
-        <a href="">Kids</a>
-        <a href="">Sport</a>
-        <a href="">Sale</a>
-        <a href="">Jordan</a>
-        <a href="">NikeSKIMS</a>
-      </div>
-
-      <div class="top-menu">
-        <button class="search">검색</button>
-        <a href="">장바구니</a>
-        <a href="">메뉴</a>
-      </div>
-    </section>
 
     <main>
       <section class="promotion">
         <p>대학생 할인 프로그램 안내</p>
         <a href="">자세히 보기</a>
       </section>
+
       <section class="hero-main-section">
         <div class="hero-main-img">
-          <img src="https://picsum.photos/200/200" alt="" />
+          <img src="https://picsum.photos/seed/nikehero/1200/600" alt="" />
         </div>
         <div class="main-script">
           <h2>누구나 입지만 똑같을 수 없는 스타일</h2>
           <div class="story1">
-            <p>스튜디오 플리스라는 하나의 캔버스 위에 펼쳐진 3인 아티스트의 독창적인 세계관.</p>
+            <p>
+              스튜디오 플리스라는 하나의 캔버스 위에 펼쳐진 3인 아티스트의
+              독창적인 세계관.
+            </p>
             <p>실로 움직임을 그리는 자수 아티스트 조이스티치,</p>
             <p>3D피스로 새로운 형태를 만드는 3D 아티스트 키무네,</p>
             <p>핸드페인팅으로 이야기를 새기는 세라믹 아티스트 미스터범.</p>
           </div>
           <div class="story2">
-            그들의 작업 비하인드를 확인하고, 여러분의 마음을 사로잡은 아티스트 스타일에 투표해 보세요.
+            그들의 작업 비하인드를 확인하고, 여러분의 마음을 사로잡은 아티스트
+            스타일에 투표해 보세요.
           </div>
           <div class="main-atag">
             <a href="">아티스트 스토리 보기</a>
@@ -69,13 +113,17 @@
           </div>
         </div>
       </section>
+
       <section class="hero-sub-section">
         <div class="hero-sub1">
           <div class="hero-sub1-script">
             <p>나이키 스포츠웨어 & 에어포스 1 '07 LV8</p>
             <h2>어디서든 돋보이는 스타일</h2>
             <p>편안한 착용감과 클래식한 디자인의 완벽한 조화.</p>
-            <p>가벼운 발검은 위, 산뜩한 나이키 스포츠웨어를 매치해 당신만의 룩을 연출해보세요.</p>
+            <p>
+              가벼운 발걸음 위, 산뜻한 나이키 스포츠웨어를 매치해 당신만의 룩을
+              연출해보세요.
+            </p>
             <a href="" class="purchase">구매하기</a>
           </div>
         </div>
@@ -90,80 +138,269 @@
           </div>
         </div>
       </section>
+
+      <!-- Trending Now 영역 (수정) -->
       <section class="card">
         <h2>Trending Now</h2>
-        <div class="cards">
-          <h2>나이키 줌 플라이 6</h2>
-          <a href="" class="purchase">구매하기</a>
-        </div>
-        <div class="cards">
-          <h2>나이키 프리 메트콘 7</h2>
-          <a href="" class="purchase">구매하기</a>
-        </div>
-        <div class="cards">
-          <h2>나이키 줌 스카이론</h2>
-          <a href="" class="purchase">구매하기</a>
+        <div class="cards-wrapper">
+          <div class="card-item">
+            <img
+              src="https://picsum.photos/seed/trend1/600/800"
+              alt="나이키 트레이닝 용품"
+            />
+            <div class="card-content">
+              <h3>나이키 트레이닝 용품</h3>
+              <a href="" class="purchase">구매하기</a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img
+              src="https://picsum.photos/seed/trend2/600/800"
+              alt="나이키 줌 스카이론"
+            />
+            <div class="card-content">
+              <h3>나이키 줌 스카이론</h3>
+              <a href="" class="purchase">구매하기</a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img
+              src="https://picsum.photos/seed/trend3/600/800"
+              alt="나이키 줌 플라이 6"
+            />
+            <div class="card-content">
+              <h3>나이키 줌 플라이 6</h3>
+              <a href="" class="purchase">구매하기</a>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- SPOTLIGHT 영역 (수정) -->
       <section class="product">
         <h2>SPOTLIGHT</h2>
-        <p>혁신적인 기술에 클래식한 실루엣을 더한 나이키 아이템으로 닿는 곳마다 시선을 사로잡아 보세요.</p>
-        <div class="mini">
-          <div class="mini-menu">
-            <img src="https://picsum.photos/200/200" alt="" />
+        <p class="spotlight-sub">
+          혁신적인 기술에 클래식한 실루엣을 더한 나이키 아이템으로 걸음이 닿는
+          곳마다 시선을 사로잡아 보세요.
+        </p>
+
+        <div class="spotlight-grid">
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img src="https://picsum.photos/seed/s1/150/100" alt="문 슈" />
+            </div>
             <p>문 슈</p>
           </div>
-          <div class="mini-menu">
-            <img src="https://picsum.photos/200/200" alt="" />
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s2/150/100"
+                alt="줌 스카이론"
+              />
+            </div>
             <p>줌 스카이론</p>
           </div>
-          <div class="mini-menu">
-            <img src="https://picsum.photos/200/200" alt="" />
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s3/150/100"
+                alt="에어로 핏"
+              />
+            </div>
             <p>에어로 핏</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s4/150/100"
+                alt="뮬 & 샌들"
+              />
+            </div>
+            <p>뮬 & 샌들</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s5/150/100"
+                alt="에어맥스 모토 2K"
+              />
+            </div>
+            <p>에어맥스 모토 2K</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s6/150/100"
+                alt="보메로 플러스"
+              />
+            </div>
+            <p>보메로 플러스</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img src="https://picsum.photos/seed/s7/150/100" alt="ACG" />
+            </div>
+            <p>ACG</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s8/150/100"
+                alt="아바 로버"
+              />
+            </div>
+            <p>아바 로버</p>
+          </div>
+
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s9/150/100"
+                alt="에어 포스 1"
+              />
+            </div>
+            <p>에어 포스 1</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s10/150/100"
+                alt="페가수스 트레일"
+              />
+            </div>
+            <p>페가수스 트레일</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s11/150/100"
+                alt="머큐리얼"
+              />
+            </div>
+            <p>머큐리얼</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img src="https://picsum.photos/seed/s12/150/100" alt="테니스" />
+            </div>
+            <p>테니스</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s13/150/100"
+                alt="보메로 5"
+              />
+            </div>
+            <p>보메로 5</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s14/150/100"
+                alt="에어 조던 1"
+              />
+            </div>
+            <p>에어 조던 1</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img src="https://picsum.photos/seed/s15/150/100" alt="P-6000" />
+            </div>
+            <p>P-6000</p>
+          </div>
+          <div class="spotlight-item">
+            <div class="img-box">
+              <img
+                src="https://picsum.photos/seed/s16/150/100"
+                alt="그래픽 티셔츠"
+              />
+            </div>
+            <p>그래픽 티셔츠</p>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer 영역 (수정) -->
     <footer>
-      <div class="info1">
+      <div class="footer-top">
         <div class="info-menu">
           <h4>안내</h4>
-          <p>멤버가입</p>
-          <p>매장찾기</p>
-          <p>제품 가이드</p>
-          <p>러닝화 가이드</p>
+          <div class="info-menu-content">
+            <p>멤버가입</p>
+            <p>매장찾기</p>
+            <p>제품 가이드</p>
+            <p>러닝화 가이드</p>
+          </div>
         </div>
         <div class="info-menu">
           <h4>멤버 혜택</h4>
-          <p>웰컴 쿠폰</p>
-          <p>생일 쿠폰</p>
-          <p>학생 할인 쿠폰</p>
+          <div class="info-menu-content">
+            <p>웰컴 쿠폰</p>
+            <p>생일 쿠폰</p>
+            <p>학생 할인 쿠폰</p>
+          </div>
         </div>
         <div class="info-menu">
           <h4>고객센터</h4>
-          <p>주문배송 조회</p>
-          <p>결제 방법</p>
-          <p>공지사항</p>
-          <p>문의하기</p>
+          <div class="info-menu-content">
+            <p>주문배송조회</p>
+            <p>반품 정책</p>
+            <p>결제 방법</p>
+            <p>공지사항</p>
+            <p>문의하기</p>
+          </div>
         </div>
         <div class="info-menu">
-          <h2>회사소개</h2>
-          <p>About Nike</p>
-          <p>소식</p>
-          <p>채용</p>
-          <p>투자자</p>
-          <p>코칭</p>
-          <p>신고하기</p>
+          <h4>회사소개</h4>
+          <div class="info-menu-content">
+            <p>About Nike</p>
+            <p>소식</p>
+            <p>채용</p>
+            <p>투자자</p>
+            <p>지속가능성</p>
+            <p>코칭</p>
+            <p>신고하기</p>
+          </div>
+        </div>
+        <div class="footer-region">
+          <span>🌐 대한민국</span>
         </div>
       </div>
-      <div class="info2">
-        <div class="foot-info">
-          <span>ⓒ 2026 Nike, Inc. All Righs Reserved</span>
-          <p class="foot-info-task">이용약관</p>
-          <p class="foot-info-task">개인정보처리방침</p>
-          <p class="foot-info-task">위치정보 이용약관</p>
-          <p class="foot-info-task">영상정보처리기기 운영방침</p>
+
+      <div class="footer-mid">
+        <span>ⓒ 2026 Nike, Inc. All Rights Reserved</span>
+        <a href="">이용약관</a>
+        <a href="" class="bold-text">개인정보처리방침</a>
+        <a href="">위치정보이용약관</a>
+        <a href="">영상정보처리기기 운영 방침</a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="company-details">
+          <p>
+            (유)나이키코리아 대표 Chase Louis Taylor, 체이스 루이스 테일러 |
+            서울 강남구 테헤란로 152 강남파이낸스센터 30층 | 통신판매업신고번호
+            2011-서울강남-03461 | 사업자등록번호 220-88-09068
+            <a href="">사업자 정보 확인</a>
+          </p>
+          <p>
+            고객센터 전화 문의 <a href="tel:080-022-0182">080-022-0182</a> FAX
+            02-6744-5880 | 이메일 Nikekorea@nike.com | 호스팅서비스사업자
+            (유)나이키코리아
+          </p>
+        </div>
+        <div class="safety-text">
+          <p>
+            현금 등으로 결제 시 안전 거래를 위해 나이키 쇼핑몰에서 가입하신
+            한국결제네트웍스 유한회사의 구매안전 서비스(<a href=""
+              >결제대금예치</a
+            >)를 이용하실 수 있습니다.
+          </p>
+          <p>
+            콘텐츠산업진흥법에 의한 콘텐츠 보호 안내 <a href="">자세히 보기</a>
+          </p>
         </div>
       </div>
     </footer>
