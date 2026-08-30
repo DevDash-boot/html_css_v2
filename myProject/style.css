@@ -5,38 +5,28 @@
 }
 
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #fff;
   color: #111;
 }
 
-/* ==========================================
-   HEADER
-   ========================================== */
+/* 헤더 */
 
 header.menual {
   position: relative;
   width: 100%;
 }
 
-/* ==========================================
-   HEADER 상단
-   ========================================== */
+/* 헤더 상단 */
 
 .top1 {
   background-color: #f5f5f5;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 10px 48px;
-
   font-size: 12px;
   font-weight: bold;
-
   height: 36px;
 }
 
@@ -50,36 +40,24 @@ header.menual {
   color: #7c7c7c;
 }
 
-/* ==========================================
-   HEADER 하단
-   ========================================== */
+/* 헤더 하단 - 메뉴 바 */
 
 .top2 {
   background-color: #fff;
-
   display: flex;
   align-items: center;
-
   width: 100%;
   height: 60px;
-
   padding: 0 48px;
-
   position: fixed;
-
   top: 36px;
   left: 0;
-
   z-index: 100;
-
   border-bottom: 1px solid #e5e5e5;
-
   transition: top 0.2s ease;
 }
 
-/* ==========================================
-   LOGO
-   ========================================== */
+/* 헤더 로고 */
 
 .top-logo {
   display: flex;
@@ -93,24 +71,17 @@ header.menual {
   font-size: 24px;
 }
 
-/* ================================
-   중앙 NAV
-   ================================ */
+/* 헤더 하단의 중앙 nav */
 
 .top-nav {
   position: absolute;
-
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   align-items: center;
-
   gap: 20px;
-
   font-size: 16px;
   font-weight: bold;
-
   white-space: nowrap;
 }
 
@@ -119,46 +90,30 @@ header.menual {
   color: black;
 }
 
-/* ================================
-   오른쪽 MENU
-   ================================ */
+/* 오른쪽 카테고리 메뉴 */
 
 .top-menu {
   display: flex;
   align-items: center;
-
   margin-left: auto;
-
   flex-shrink: 0;
 }
 
-/* ==========================================
-   검색창
-   ========================================== */
+/* 검색창 */
 
 .top-menu .search {
   border: none;
-
   background-color: #f5f5f5;
-
   padding: 8px 16px 8px 40px;
-
   border-radius: 20px;
-
   outline: none;
-
   font-size: 14px;
-
   width: 180px;
   height: 40px;
-
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
-
   background-repeat: no-repeat;
   background-position: 12px center;
-
   transition: background-color 0.2s;
-
   cursor: pointer;
 }
 
@@ -166,28 +121,19 @@ header.menual {
   background-color: #e5e5e5;
 }
 
-/* ==========================================
-   하트 / 바구니
-   ========================================== */
+/* 헤더 하단 하트와 장바구니 */
 
 .top-menu a {
   text-decoration: none;
-
   color: black;
-
   margin-left: 8px;
-
   width: 40px;
   height: 40px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   flex-shrink: 0;
-
   transition: background-color 0.2s;
 }
 
@@ -195,93 +141,67 @@ header.menual {
   background-color: #f5f5f5;
 }
 
-/* ==========================================
-   MAIN
-   ========================================== */
+/* 메인 */
 
 main {
   width: 100%;
   padding-top: 60px;
 }
 
-/* ==========================================
-   Promotion
-   ========================================== */
-
 .promotion {
   background-color: #f5f5f5;
-
   text-align: center;
-
   padding: 10px;
 }
 
 .promotion p {
   margin-bottom: 2px;
-
   font-weight: bold;
   font-size: 14px;
 }
 
 .promotion a {
   color: black;
-
   font-size: 12px;
   font-weight: bold;
 }
 
-/* ==========================================
-   MAIN HERO
-   ========================================== */
+/* 메인 게시물 */
 
 .hero-main-img img {
   display: block;
-
   height: 70vh;
   width: 100%;
-
   object-fit: cover;
 }
 
 .main-script {
   text-align: center;
-
   padding: 40px 20px;
 }
 
 .main-script h2 {
   font-size: 48px;
-
   font-weight: 900;
-
   margin-bottom: 16px;
 }
 
 .story1 p,
 .story2 {
   font-size: 15px;
-
   line-height: 1.6;
-
   color: #111;
 }
 
 .main-atag a {
   text-decoration: none;
-
   color: #fff;
-
   background-color: black;
-
   border-radius: 30px;
-
   font-size: 14px;
   font-weight: bold;
-
   padding: 8px 18px;
-
   margin: 20px 4px 0;
-
   display: inline-block;
 }
 
@@ -289,25 +209,16 @@ main {
   background-color: #7c7c7c;
 }
 
-/* ==========================================
-   HERO SUB 1
-   ========================================== */
+/* 히어로 서브1 */
 
 .hero-sub1 {
   display: flex;
-
   flex-direction: column;
-
   justify-content: flex-end;
-
   align-items: center;
-
   color: white;
-
   text-align: center;
-
   height: 65vh;
-
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
     url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
@@ -319,31 +230,19 @@ main {
 
 .hero-sub1-script h2 {
   font-size: 48px;
-
   margin: 10px;
-
   font-weight: 900;
 }
 
-/* ==========================================
-   구매하기 버튼
-   ========================================== */
-
+/* 구매하기 버튼 */
 .purchase {
   text-decoration: none;
-
   background-color: white;
-
   color: black;
-
   border-radius: 20px;
-
   font-size: 14px;
-
   font-weight: bold;
-
   padding: 8px 18px;
-
   display: inline-block;
 }
 
@@ -351,43 +250,28 @@ main {
   background-color: #cccccc;
 }
 
-/* ==========================================
-   HERO SUB 2
-   ========================================== */
-
+/* 히어로 서브2 */
 .hero-sub2row {
   display: flex;
-
   gap: 0;
-
   height: 60vh;
-
   padding: 0;
 }
 
 .hero-sub2 {
   flex: 1;
-
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
     url("https://picsum.photos/seed/sub2/800/600") center/cover;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: flex-end;
-
   align-items: flex-start;
-
   padding: 40px;
-
   color: white;
 }
 
-/* ==========================================
-   TRENDING NOW
-   ========================================== */
+/* 메인 하단 트렌딩 나우 */
 
 .card {
   padding: 40px 48px;
@@ -395,32 +279,25 @@ main {
 
 .card > h2 {
   font-size: 24px;
-
   font-weight: bold;
-
   margin-bottom: 24px;
 }
 
 .cards-wrapper {
   display: flex;
-
   gap: 16px;
 }
 
 .card-item {
   position: relative;
-
   flex: 1;
-
   height: 540px;
-
   overflow: hidden;
 }
 
 .card-item img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
