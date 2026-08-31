@@ -221,7 +221,7 @@ main {
   height: 65vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
-    url("https://picsum.photos/seed/netflex93/1200/600") center/cover;
+    url("https://placehold.co/1200x600") center/cover;
 }
 
 .hero-sub1-script {
@@ -262,7 +262,7 @@ main {
   flex: 1;
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
-    url("https://picsum.photos/seed/sub2/800/600") center/cover;
+    url("https://placehold.co/800x600") center/cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
