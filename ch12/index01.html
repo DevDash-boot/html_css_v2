@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 대시보드</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h3 class="logo">A</h3>
+        <h1 class="logo-title">Admin</h1>
+      </div>
+
+      <div class="nav nav-main">
+        <p class="nav-group">메인</p>
+        <a href="" class="navdown dashboard">대시보드</a>
+        <a href="" class="navdown">주문 관리</a>
+        <a href="" class="navdown">상품 관리</a>
+      </div>
+      <div class="nav nav-customer">
+        <p class="nav-group">고객</p>
+        <a href="" class="navdown">회원 관리</a>
+        <a href="" class="navdown">문의 내역</a>
+      </div>
+      <div class="nav nav-etc">
+        <p class="nav-group">기타</p>
+        <a href="" class="navdown">통계</a>
+        <a href="" class="navdown">설정</a>
+      </div>
+    </aside>
+    <main>
+      <div class="topbar">
+        <input class="search" type="text" placeholder="주문번호, 상품명 검색" />
+        <div class="topbar-p">
+          <p class="profile-top">김</p>
+          <p class="profile-name">김관리</p>
+        </div>
+      </div>
+      <div class="page">
+        <h2>대시보드</h2>
+        <p class="date">2026년 9월 1일 기준</p>
+        <section class="stat-row">
+          <div class="stat-card">
+            <p class="item-name">오늘 매출</p>
+            <p class="number">2,847,000원</p>
+            <p class="plus">전일 대비 +12.5%</p>
+          </div>
+          <div class="stat-card">
+            <p class="item-name">신규 주문</p>
+            <p class="number">128건</p>
+            <p class="plus">전일 대비 +8.2%</p>
+          </div>
+          <div class="stat-card">
+            <p class="item-name">신규 회원</p>
+            <p class="number">34명</p>
+            <p class="minus">전일 대비 -3.1%</p>
+          </div>
+          <div class="stat-card">
+            <p class="item-name">방문자</p>
+            <p class="number">5,241명</p>
+            <p class="plus">전일 대비 +21.7%</p>
+          </div>
+        </section>
+
+        <section class="order-table">
+          <h4>최근 주문</h4>
+          <table class="orders">
+            <tr class="table-name">
+              <td>주문번호</td>
+              <td>고객</td>
+              <td>상품</td>
+              <td>금액</td>
+              <td>상태</td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-001</td>
+              <td>이영희</td>
+              <td>무선 블루투스 이어폰</td>
+              <td>29,900원</td>
+              <td><span class="state delivery-completed">배송완료</span></td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-002</td>
+              <td>박지훈</td>
+              <td>스테인리스 텀블러</td>
+              <td>15,900원</td>
+              <td><span class="state delivery-during">배송중</span></td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-003</td>
+              <td>최민수</td>
+              <td>휴대용 보조배터리</td>
+              <td>22,900원</td>
+              <td><span class="state pending-payment">결제 대기</span></td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-004</td>
+              <td>정하늘</td>
+              <td>기계식 키보드</td>
+              <td>89,000원</td>
+              <td><span class="state cancel">취소</span></td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-005</td>
+              <td>강수진</td>
+              <td>모니터 받침대</td>
+              <td>34,500원</td>
+              <td><span class="state delivery-completed">배송완료</span></td>
+            </tr>
+            <tr class="row-line">
+              <td>#20260413-006</td>
+              <td>윤태호</td>
+              <td>USB-C 허브</td>
+              <td>41,000원</td>
+              <td><span class="state delivery-during">배송중</span></td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="panel-row">
+          <div class="panel-left">
+            <h4>주간 매출</h4>
+            <div class="chart">
+              <div class="chart-grid">
+                <div class="bar" style="height: 45%"></div>
+                <div class="bar" style="height: 62%"></div>
+                <div class="bar" style="height: 55%"></div>
+                <div class="bar" style="height: 78%"></div>
+                <div class="bar" style="height: 70%"></div>
+                <div class="bar" style="height: 92%"></div>
+                <div class="bar" style="height: 60%"></div>
+              </div>
+              <div class="day">
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span>토</span>
+                <span>일</span>
+              </div>
+            </div>
+          </div>
+          <div class="panel-right">
+            <h4>최근 활동</h4>
+            <div class="recent">
+              <p class="profile">이</p>
+              <div class="activity">
+                <p>이영희님이 주문했습니다.</p>
+                <p class="time">3분 전</p>
+              </div>
+            </div>
+            <div class="recent">
+              <p class="profile">박</p>
+              <div class="activity">
+                <p>박지훈님이 회원가입했습니다.</p>
+                <p class="time">12분 전</p>
+              </div>
+            </div>
+            <div class="recent">
+              <p class="profile">최</p>
+              <div class="activity">
+                <p>최민수님이 문의를 남겼습니다.</p>
+                <p class="time">28분 전</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
