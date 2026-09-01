@@ -364,22 +364,31 @@ main {
 ================================ */
 @media (max-width: 768px) {
   .sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 10px 20px;
-    z-index: 100;
+
+    overflow-x: auto;
+    white-space: nowrap;
   }
+
+  .sidebar-logo {
+    flex-shrink: 0;
+  }
+  .logo { margin-right: 7px; }
+
   .nav {
     display: flex;
     flex-direction: row;
+    flex-shrink: 0;
   }
+
   .nav-group {
     display: none;
   }
+  .navdown { white-space: nowrap; padding: 7px 10px; font-size: 13px; } 
+  
+  .sidebar { overflow-x: auto; }
+  main { width: 100%; padding-top: 60px; }
+  
 }
