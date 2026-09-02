@@ -228,7 +228,6 @@ main {
   font-weight: 700;
   color: var(--ad-sub);
 }
-
 .table-name td {
   padding: 10px;
 }
@@ -384,6 +383,9 @@ main {
   .panel-right {
     flex-basis: 100%;
   }
+  .stat-card {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
 }
 /* ================================
   반응형 - 스마트폰
@@ -418,7 +420,7 @@ main {
   }
   /* 카드 세로 배열 */
   .stat-card {
-    flex-basis: 100%;
+    flex: 0 0 100%;
   }
   .page {
     padding: 16px;
