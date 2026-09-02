@@ -177,7 +177,7 @@ main {
   cursor: pointer;
 }
 .stat-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -214,7 +214,7 @@ main {
 }
 .order-table h4 {
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 15px 10px 10px 10px;
 }
 .orders {
   /* 겹치는 부분 선 없애기 */
@@ -236,9 +236,11 @@ main {
   font-size: 14px;
   border-top: 2px solid var(--ad-line);
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 .row-line:hover {
   background-color: var(--ad-line);
+  transform: translateY(-2px);
 }
 
 /* 뱃지-상태 */
@@ -319,7 +321,7 @@ main {
   justify-content: space-evenly;
 }
 .day span {
-  width: 13%;
+  width: 25%;
   text-align: center;
 }
 
@@ -338,6 +340,14 @@ main {
   display: flex;
   margin: 10px 20px;
   border-bottom: 2px solid var(--ad-line);
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+.recent:hover {
+  background-color: var(--ad-line);
+  border-radius: 10px;
+  transform: translateY(-2px);
 }
 .profile {
   background-color: var(--ad-primary);
@@ -360,35 +370,60 @@ main {
 }
 
 /* ================================
-  반응형 - 화면 작을 때
+  반응형 - 태블릿
+================================ */
+@media (max-width: 1024px) {
+  .panel-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .panel-left,
+  .panel-right {
+    flex-basis: 100%;
+  }
+}
+/* ================================
+  반응형 - 스마트폰
 ================================ */
 @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
   .sidebar {
+    /* 세로 배치에서는 basis가 "높이"로 해석되므로 auto로 푼다 */
+    flex: 0 0 auto;
+    padding: 12px;
+  }
+  .side-nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
-
+    gap: 20px;
     overflow-x: auto;
-    white-space: nowrap;
+    padding-bottom: 10px;
   }
-
-  .sidebar-logo {
-    flex-shrink: 0;
-  }
-  .logo { margin-right: 7px; }
 
   .nav {
     display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
+    gap: 20px;
   }
-
   .nav-group {
     display: none;
   }
-  .navdown { white-space: nowrap; padding: 7px 10px; font-size: 13px; } 
-  
-  .sidebar { overflow-x: auto; }
-  main { width: 100%; padding-top: 60px; }
-  
+  .navdown {
+    white-space: nowrap; /* 메뉴 이름이 줄바꿈되지 않게 */
+    flex-shrink: 0; /* 눌려서 글자가 깨지지 않게 */
+  }
+  .stat-card {
+    flex-basis: 100%;
+  }
+  .page {
+    padding: 16px;
+  }
+
+  .orders td {
+    padding: 10px 0 10px 8px;
+  }
+  .state {
+    padding: 4px;
+  }
 }
