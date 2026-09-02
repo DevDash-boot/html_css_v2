@@ -373,6 +373,7 @@ main {
   반응형 - 태블릿
 ================================ */
 @media (max-width: 1024px) {
+  /* 화면 크기가 작아지면 차트와 최근현황 세로 배열 */
   .panel-row {
     display: flex;
     flex-direction: column;
@@ -389,6 +390,7 @@ main {
   body {
     flex-direction: column;
   }
+  /* sidebar - 가로 배열 */
   .sidebar {
     /* 세로 배치에서는 basis가 "높이"로 해석되므로 auto로 푼다 */
     flex: 0 0 auto;
@@ -401,7 +403,6 @@ main {
     overflow-x: auto;
     padding-bottom: 10px;
   }
-
   .nav {
     display: flex;
     gap: 20px;
@@ -413,13 +414,14 @@ main {
     white-space: nowrap; /* 메뉴 이름이 줄바꿈되지 않게 */
     flex-shrink: 0; /* 눌려서 글자가 깨지지 않게 */
   }
+  /* 카드 세로 배열 */
   .stat-card {
     flex-basis: 100%;
   }
   .page {
     padding: 16px;
   }
-
+  /* 최근 주문 테이블 글자 넘침 방지로 padding 조절 */
   .orders td {
     padding: 10px 0 10px 8px;
   }
