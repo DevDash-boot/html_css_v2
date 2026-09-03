@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 로그인 전체 */
+section {
+  width: 850px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.top {
+  height: 45px;
+  background-color: #503396;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+.top h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.close {
+  font-size: 25px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+/* main */
+main {
+  display: flex;
+  padding: 10px 20px 20px;
+  gap: 20px;
+}
+.loginL {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 380px;
+  margin-right: 20px;
+}
+.id,
+.pw {
+  padding: 0 10px;
+  width: 380px;
+  height: 46px;
+  margin: 8px 0 8px 0;
+  border: 1px solid #c9c8c8;
+}
+.checkbox-phone {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 0;
+}
+.checkbox span {
+  font-size: 15px;
+}
+.checkbox input {
+  width: 16px;
+  height: 16px;
+}
+.phone {
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+}
+.phonelogin {
+  color: #306697;
+  font-size: 14px;
+}
+.ad {
+  color: #b7bbbe;
+  font-size: 12px;
+}
+.btn-login {
+  background-color: #e0e0e0;
+  color: #585858;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.btn-login:hover {
+  background-color: #503396;
+  color: white;
+}
+.nav {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+}
+.nav a {
+  color: #656666;
+}
+.outer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.loginR {
+  margin-top: 10px;
+}
+.login-img {
+  width: 380px;
+  height: 380px;
+}

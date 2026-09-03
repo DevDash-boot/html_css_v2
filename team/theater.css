@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: lightskyblue;
+  height: 100px;
+}
+.fixed {
+  height: 40px;
+  background-color: #f8f8fa;
+}
+.fixed span {
+  color: #666;
+}
+.innerwrap {
+  margin-bottom: 50px;
+  padding: 50px 0;
+}
+.innerwrap h1 {
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.card-top {
+  height: 824px;
+  border: 1px solid blue;
+}
+.card-middle {
+  margin-top: 100px;
+  height: 542px;
+  border: 1px solid blue;
+}
+
+.card-bottom {
+  margin-top: 100px;
+  height: 260px;
+  border: 1px solid blue;
+}
+
+.item352 {
+  border: 1px solid red;
+  height: 260px;
+  width: 352px;
+}
+.item726 {
+  border: 1px solid green;
+  height: 260px;
+  width: 726px;
+}
+.item542 {
+  border: 1px solid brown;
+  height: 260px;
+  width: 542px;
+}
