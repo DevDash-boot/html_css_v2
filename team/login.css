@@ -78,6 +78,7 @@ main {
   display: flex;
   align-items: flex-end;
   text-align: right;
+  margin-bottom: 10px;
 }
 .phonelogin {
   color: #306697;
