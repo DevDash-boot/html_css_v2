@@ -6,9 +6,11 @@
     <title>전체극장</title>
     <link rel="stylesheet" href="allTheater.css" />
   </head>
-  <body>
+
+  <body id="top">
     <header>
       <div class="header-grid">
+        <!-- 상단 메뉴 -->
         <div class="up-nav">
           <div class="left-nav">
             <a href="">VIP LOUNGE</a>
@@ -21,34 +23,45 @@
             <a href="">빠른예매</a>
           </div>
         </div>
+        <!-- 메인 메뉴 -->
         <div class="main-nav">
           <div class="main-nav-left">
             <a href="">
-              <img class="nav-img" src="logo_img/menu.png" alt="" />
+              <img class="nav-img" src="logo_img/menu.png" alt="메뉴" />
             </a>
             <a href="">
-              <img class="nav-img" src="logo_img/search.png" alt="" />
+              <img class="nav-img" src="logo_img/search.png" alt="검색" />
             </a>
           </div>
           <div class="nav3">
             <a href="">영화</a>
             <a href="">예매</a>
-            <a href="">극장</a>
+            <div class="nav-dropdown">
+              <a href="" class="theater-menu"> 극장 </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <a href="allTheater.html"> 전체극장 </a>
+                  <a href="theater.html"> 특별관 </a>
+                </div>
+              </div>
+            </div>
           </div>
           <a href="">
-            <img class="main-home" src="logo_img/home.png" alt="" />
+            <img class="main-home" src="logo_img/home.png" alt="메가박스" />
           </a>
+          <!-- 이벤트 / 스코어 / 혜택 -->
           <div class="nav3">
             <a href="">이벤트</a>
             <a href="">스코어</a>
             <a href="">혜택</a>
           </div>
+          <!-- 오른쪽 -->
           <div class="main-nav-right">
             <a href="">
-              <img class="nav-img" src="logo_img/calendar.png" alt="" />
+              <img class="nav-img" src="logo_img/calendar.png" alt="달력" />
             </a>
             <a href="">
-              <img class="nav-img" src="logo_img/user.png" alt="" />
+              <img class="nav-img" src="logo_img/user.png" alt="마이페이지" />
             </a>
           </div>
         </div>
@@ -57,68 +70,112 @@
 
     <section class="fixed">
       <div class="inner-fixed">
-        <a href=""><img class="home-icon" src="logo_img/homeicon.png" alt="" /></a>
-        <span class="arrow"> 〉</span>
-        <a href="">극장</a>
-        <span class="arrow"> 〉</span>
-        <a href="">전체극장</a>
+        <a href="">
+          <img class="home-icon" src="logo_img/homeicon.png" alt="홈" />
+        </a>
+        <span class="arrow">〉</span>
+        <a href="allTheater.html"> 극장 </a>
+        <span class="arrow">〉</span>
+        <a href="allTheater.html"> 전체극장 </a>
       </div>
     </section>
+
     <main>
-      <section class="theater-box">
-        <h1>전체극장</h1>
-        <div class="box">
-          <div class="btn-top">
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-            <button class="btn-local"></button>
-          </div>
-          <div class="theater_list"></div>
+      <h1 class="at">전체극장</h1>
+      <!-- 극장 -->
+      <section class="theater-section">
+        <div class="theater-box">
+          <ul>
+            <div class="btn-group">
+              <button class="btn-local click-on">서울</button>
+              <button class="btn-local">경기</button>
+              <button class="btn-local">인천</button>
+              <button class="btn-local">대구/충정/세종</button>
+              <button class="btn-local">부산/대구/경상</button>
+              <button class="btn-local">광주/전라</button>
+              <button class="btn-local">강원</button>
+              <button class="btn-local last-btn-lcoal">제주</button>
+            </div>
+            <div class="theater-list">
+              <ul class="local-group">
+                <li><a href="">강남</a></li>
+                <li><a href="">더부티크목동현대백화점</a></li>
+                <li><a href="">상봉</a></li>
+                <li><a href="">신촌</a></li>
+                <li><a href="">홍대(아니메)</a></li>
+              </ul>
+              <ul class="local-group">
+                <li><a href="">강동</a></li>
+                <li><a href="">동대문</a></li>
+                <li><a href="">상암월드컵경기장</a></li>
+                <li><a href="">이수</a></li>
+                <li><a href="">화곡</a></li>
+              </ul>
+              <ul class="local-group">
+                <li><a href="">구의이스트폴</a></li>
+                <li><a href="">마곡</a></li>
+                <li><a href="">센트럴</a></li>
+                <li><a href="">코엑스</a></li>
+              </ul>
+              <ul class="lg-last">
+                <li><a href="">군자</a></li>
+                <li><a href="">목동</a></li>
+                <li><a href="">송파파크하비오</a></li>
+                <li><a href="">픽쳐하우스(휴관)</a></li>
+              </ul>
+            </div>
+          </ul>
           <div class="box-bottom">
-            <p>i</p>
-            <p>나의 선호 극장 정보</p>
-            <a href="">로그인하기</a>
+            <p class="info-icon">
+              <img src="allTheater_img/bookmark.png" alt="" />
+            </p>
+            <p class="box-text">나의 선호 극장 정보</p>
+            <a href=""> 로그인하기 </a>
           </div>
         </div>
       </section>
+
       <section class="theater-event">
         <div class="event-top">
           <h2>극장 이벤트</h2>
-          <a class="more" href="https://www.megabox.co.kr/event/theater">더보기 ></a>
+          <a class="more" href="https://www.megabox.co.kr/event/theater">
+            더보기 〉
+          </a>
         </div>
         <div class="event-main">
           <a href="https://www.megabox.co.kr/event/detail?eventNo=21139">
-            <img src="allTheater_img/notice1.png" alt="" />
+            <img src="allTheater_img/notice1.png" alt="극장 이벤트" />
           </a>
           <a href="https://www.megabox.co.kr/event/detail?eventNo=21187">
-            <img src="allTheater_img/notice2.png" alt="" />
+            <img src="allTheater_img/notice2.png" alt="극장 이벤트" />
           </a>
         </div>
       </section>
+
       <section class="theater-notice">
         <div class="notice-top">
           <h2>극장 공지사항</h2>
-          <a class="more" href="https://www.megabox.co.kr/support/notice?ti=3">더보기 ></a>
+          <a class="more" href="https://www.megabox.co.kr/support/notice?ti=3">
+            더보기 〉
+          </a>
         </div>
+        <!-- 공지사항 테이블 -->
         <table class="th-table">
-          <thead class="td">
+          <thead>
             <tr>
-              <th class="thead t-theater">극장</th>
-              <th class="thead t-title">제목</th>
-              <th class="thead t-local">지역</th>
-              <th class="thead t-date">등록일</th>
+              <th class="t-theater">극장</th>
+              <th class="t-title">제목</th>
+              <th class="t-local">지역</th>
+              <th class="t-date">등록일</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>킨텍스</td>
               <td class="tb-title">
-                <a href="">[킨텍스]제 18회 DMZ 국제 다큐멘터리 영화제 개최 안내</a>
+                <a href="">
+                  [킨텍스] 제 18회 DMZ 국제 다큐멘터리 영화제 개최 안내
+                </a>
               </td>
               <td>경기</td>
               <td>2026.08.26</td>
@@ -126,7 +183,7 @@
             <tr>
               <td>송파파크하비오</td>
               <td class="tb-title">
-                <a href="">[송파파크하비오] 8/31 (월) ~ 운영시간 변경 안내</a>
+                <a href=""> [송파파크하비오] 8/31 (월) ~ 운영시간 변경 안내 </a>
               </td>
               <td>서울</td>
               <td>2026.08.26</td>
@@ -142,7 +199,7 @@
             <tr>
               <td>창원내서</td>
               <td class="tb-title">
-                <a href=""> [창원내서]영업 종료 안내 </a>
+                <a href=""> [창원내서] 영업 종료 안내 </a>
               </td>
               <td>부산/대구/경상</td>
               <td>2026.08.19</td>
@@ -150,7 +207,9 @@
             <tr>
               <td>대전신세계아트앤사이언스</td>
               <td class="tb-title">
-                <a href="">대관 행사에 따른 <더 부티크 스위트관> 이용 안내(8/15~16)</a>
+                <a href="">
+                  대관 행사에 따른 &lt;더 부티크 스위트관&gt; 이용 안내(8/15~16)
+                </a>
               </td>
               <td>대전/충청/세종</td>
               <td>2026.08.14</td>
@@ -163,48 +222,55 @@
     <footer>
       <div class="inner-foot">
         <div class="foot-top">
-          <ul class="foot-nav">
-            <a href="https://www.megabox.co.kr/megaboxinfo">회사소개</a>
-            <a href="https://www.megabox.co.kr/recruit">인재채용</a>
-            <a href="https://www.megabox.co.kr/socialcontribution">사회공헌</a>
-            <a href="https://www.megabox.co.kr/partner">제휴/광고/부대사업문의</a>
-            <a href="https://www.megabox.co.kr/support/terms">이용약관</a>
-            <a class="nav-bold" href="https://www.megabox.co.kr/support/lcinfo"
-              ><strong>위치기반서비스 이용약관</strong></a
-            >
-            <a class="nav-bold" href="https://www.megabox.co.kr/support/privacy"><strong>개인정보처리방침</strong></a>
-            <a href="https://jebo.joonganggroup.com/main">윤리경영</a>
-          </ul>
+          <div class="foot-nav">
+            <a href="https://www.megabox.co.kr/megaboxinfo"> 회사소개 </a>
+            <a href="https://www.megabox.co.kr/recruit"> 인재채용 </a>
+            <a href="https://www.megabox.co.kr/socialcontribution">
+              사회공헌
+            </a>
+            <a href="https://www.megabox.co.kr/partner">
+              제휴/광고/부대사업문의
+            </a>
+            <a href="https://www.megabox.co.kr/support/terms"> 이용약관 </a>
+            <a href="https://www.megabox.co.kr/support/lcinfo">
+              <strong> 위치기반서비스 이용약관 </strong>
+            </a>
+            <a href="https://www.megabox.co.kr/support/privacy">
+              <strong> 개인정보처리방침 </strong>
+            </a>
+            <a href="https://jebo.joonganggroup.com/main"> 윤리경영 </a>
+          </div>
           <button class="search-theater">
             <img src="logo_img/magnifer.png" alt="" />
             극장찾기
           </button>
         </div>
         <div class="foot-info">
-          <img src="logo_img/footlogo.png" alt="" />
+          <img class="foot-logo" src="logo_img/footlogo.png" alt="메가박스" />
           <div class="foot-text">
             <p>
-              서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS 1544-0070 대표이메일
-              m.dreamcenter@partner.megabox.co.kr
+              서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS
+              1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
             </p>
             <p>
-              대표자명 홍정인, 남용석 · 개인정보보호책임자 김영호 · 사업자등록번호 211-86-59478 · 통신판매업신고번호
+              대표자명 홍정인, 남용석 · 개인정보보호책임자 김영호 ·
+              사업자등록번호 211-86-59478 · 통신판매업신고번호
               2025-서울강남-00722
             </p>
             <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
           </div>
           <div class="foot-link-sns">
             <a class="link-sns" href="https://www.youtube.com/onmegabox">
-              <img src="logo_img/youtube.png" alt="" />
+              <img src="logo_img/youtube.png" alt="유튜브" />
             </a>
             <a class="link-sns" href="https://www.instagram.com/megaboxon">
-              <img src="logo_img/instagram.png" alt="" />
+              <img src="logo_img/instagram.png" alt="인스타그램" />
             </a>
             <a class="link-sns" href="https://www.facebook.com/megaboxon">
-              <img src="logo_img/facebook.png" alt="" />
+              <img src="logo_img/facebook.png" alt="페이스북" />
             </a>
-            <a class="link-sns" href="">
-              <img src="logo_img/x.png" alt="https://x.com/megaboxon" />
+            <a class="link-sns" href="https://x.com/megaboxon">
+              <img src="logo_img/x.png" alt="X" />
             </a>
           </div>
         </div>
