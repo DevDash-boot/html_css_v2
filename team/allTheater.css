@@ -218,13 +218,6 @@ header {
   padding-bottom: 26px;
   font-size: 28px;
   font-weight: 500;
-<<<<<<< HEAD
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-=======
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
->>>>>>> 75dd97e7ed7c9964eb2d5311ea0f1365d75cef57
 }
 /* 지역- 테두리 */
 .theater-section {
